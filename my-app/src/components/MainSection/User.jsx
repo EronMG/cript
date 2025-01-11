@@ -27,7 +27,13 @@ const Links = [
 const User = ({ UserImage, BuySell }) => {
     const notify = () => toast.success('Copy to clipboard!')
     const [amount, setAmount] = useState('0.0132')
-
+    const [choose, setChoose] = useState('Buy')
+    const handleBuy = () => {
+        setChoose('Buy')
+    }
+    const handleSell = () => {
+        setChoose('Sell')
+    }
     const handleQuickAmountChange = (value) => {
         setAmount(value)
     }
@@ -41,7 +47,7 @@ const User = ({ UserImage, BuySell }) => {
                 <div className='flex gap-3'>
                     <div className='w-20 flex flex-col gap-3'>
                         <img src={UserImage} className='w-20 h-20 rounded-md' alt='UserIcon' />
-                        <button className='bg-blue text-white font-medium text-sm w-full flex justify-center items-center h-8 rounded-lg'>{BuySell}</button>
+                        <button className='bg-blue text-white font-medium text-sm w-full flex justify-center items-center h-8 rounded-lg'>{choose}</button>
                     </div>
                     <div className='w-[226px]'>
                         <h2 className='text-white font-medium text-base'>I See U (ICU)</h2>
@@ -67,8 +73,18 @@ const User = ({ UserImage, BuySell }) => {
             </div>
             <div className='max-w-[350px] bg-primary flex-1 h-fit hidden sm:block p-4 rounded-2xl text-white'>
                 <div className='flex mb-4'>
-                    <button className={`flex-1 py-2 bg-blue rounded-l-lg `}>Buy</button>
-                    <button className={`flex-1 py-2 rounded-r-lg border border-l-0 opacity-50 `}>Sell</button>
+                    <button
+                        onClick={handleBuy}
+                        className={`flex-1 py-2 transition-all duration-500 ${choose === 'Buy' ? 'bg-blue border-transparent border' : 'border border-r-0 opacity-50'} rounded-l-lg `}
+                    >
+                        Buy
+                    </button>
+                    <button
+                        onClick={handleSell}
+                        className={`flex-1 py-2 transition-all duration-500 ${choose === 'Sell' ? 'bg-blue border-transparent border' : 'border border-l-0 opacity-50'}  rounded-r-lg  `}
+                    >
+                        Sell
+                    </button>
                 </div>
 
                 <div className='flex items-center bg-darkGray p-2 h-14 rounded-lg mb-4'>
