@@ -1,4 +1,3 @@
-// TradingViewWidget.jsx
 import React, { useEffect, useRef, memo } from 'react'
 
 function TradingChart() {
@@ -19,12 +18,16 @@ function TradingChart() {
           "style": "2",
           "locale": "en",
           "backgroundColor": "#131722",
-          "hide_top_toolbar": true,
+          "hide_top_toolbar": false,
           "hide_side_toolbar": false,
           "allow_symbol_change": true,
           "save_image": false,
           "calendar": false,
-          "support_host": "https://www.tradingview.com"
+          "studies": [],
+          "container_id": "tradingview-widget",
+          "custom_css_url": "",
+          "enabled_features": ["show_comparison"],
+          "disabled_features": []
         }`
         container.current.appendChild(script)
     }, [])
@@ -32,7 +35,6 @@ function TradingChart() {
     return (
         <div className='tradingview-widget-container' ref={container} style={{ height: '100%', width: '100%' }}>
             <div className='tradingview-widget-container__widget'></div>
-            <div className='tradingview-widget-copyright'></div>
         </div>
     )
 }

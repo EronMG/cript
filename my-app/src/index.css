@@ -34,3 +34,13 @@ iframe:focus-visible {
 #widget-container {
     border: 0px !important;
 }
+
+.redGrad {
+    background: rgb(255, 51, 71);
+    background: linear-gradient(90deg, rgba(255, 51, 71, 1) 25%, rgba(255, 51, 71, 0.1802521692270659) 100%);
+}
+
+.blueGrad {
+    background: rgb(68, 120, 255);
+    background: linear-gradient(-90deg, rgba(68, 120, 255, 1) 25%, rgba(68, 120, 255, 0.171848807882528) 100%);
+}

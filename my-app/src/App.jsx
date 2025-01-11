@@ -9,7 +9,6 @@ const App = () => {
     return (
         <div>
             <Nav />
-            <TopSection />
             <MainScreen />
             <Chat />
             <Footer />

@@ -19,6 +19,7 @@ export const theme = {
     screens: {
         xx: '390px',
         xs: '480px',
+        dd: '568px',
         ss: '620px',
         sm: '768px',
         md: '1060px',
