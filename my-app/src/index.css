@@ -26,3 +26,11 @@ iframe {
 iframe:focus-visible {
     outline: none !important;
 }
+
+.tradingview-widget-container iframe html.feature-no-touch.feature-no-mobiletouch.theme-dark body {
+    border: 0px !important;
+}
+
+#widget-container {
+    border: 0px !important;
+}

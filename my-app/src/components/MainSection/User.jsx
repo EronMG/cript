@@ -36,8 +36,8 @@ const User = ({ UserImage, BuySell }) => {
         setAmount('0.0132')
     }
     return (
-        <div className='flex flex-wrap gap-2 md:max-w-[350px]'>
-            <div className='bg-primary rounded-2xl flex-1 max-w-[350px] w-full xx:max-w-[790px] md:max-w-[350px] p-4'>
+        <div className='flex flex-wrap max-h-[500px] gap-2 md:max-w-[350px]'>
+            <div className='bg-primary rounded-2xl flex-1 h-fit max-w-[350px] w-full xx:max-w-[790px] md:max-w-[350px] p-4'>
                 <div className='flex gap-3'>
                     <div className='w-20 flex flex-col gap-3'>
                         <img src={UserImage} className='w-20 h-20 rounded-md' alt='UserIcon' />
@@ -65,7 +65,7 @@ const User = ({ UserImage, BuySell }) => {
                     </div>
                 </div>
             </div>
-            <div className='max-w-[350px] bg-primary flex-1 hidden sm:block p-4 rounded-2xl text-white'>
+            <div className='max-w-[350px] bg-primary flex-1 h-fit hidden sm:block p-4 rounded-2xl text-white'>
                 <div className='flex mb-4'>
                     <button className={`flex-1 py-2 bg-blue rounded-l-lg `}>Buy</button>
                     <button className={`flex-1 py-2 rounded-r-lg border border-l-0 opacity-50 `}>Sell</button>
